@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chope — Assistance</title>
+<meta name="description" content="Aide et questions fréquentes sur Chope, la course de bières entre potes.">
+<meta property="og:title" content="Chope — Assistance">
+<meta property="og:description" content="Aide et questions fréquentes sur Chope, la course de bières entre potes.">
+<meta property="og:image" content="img/icon.png">
+<meta name="theme-color" content="#0c7a3e">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<style>
+@font-face{font-family:"Bebas Neue";src:url("fonts/bebas-neue-latin-400-normal.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Nunito";src:url("fonts/nunito-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Nunito";src:url("fonts/nunito-latin-800-normal.woff2") format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Nunito";src:url("fonts/nunito-latin-900-normal.woff2") format("woff2");font-weight:900;font-display:swap}
+*{box-sizing:border-box}
+:root{--paper:#f3ead3;--card:#fffaf0;--ink:#161616;--muted:#7d7467;--red:#d7262e;--yellow:#ffd23f;--turf:#0c7a3e;--board:#141414;--digit:#ffe36a;--rail:repeating-linear-gradient(90deg,#d7262e 0 14px,#fff 14px 28px)}
+body{margin:0;background:var(--paper);background-image:repeating-linear-gradient(0deg,rgba(22,22,22,.035) 0 1px,transparent 1px 7px);color:var(--ink);font-family:"Nunito",-apple-system,"Segoe UI",Roboto,sans-serif;font-weight:600;font-size:17px;line-height:1.55}
+header.top{background:var(--turf);background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 10px,transparent 10px 20px);color:#fff;border-bottom:8px solid transparent;border-image:var(--rail) 1;box-shadow:inset 0 -3px 0 var(--ink)}
+header.top .in{max-width:860px;margin:0 auto;padding:18px 20px 14px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header.top .brand{font-family:"Bebas Neue",system-ui,sans-serif;font-size:38px;letter-spacing:.06em;color:#fff;text-decoration:none;text-shadow:3px 3px 0 var(--ink);line-height:1}
+header.top .brand small{display:block;font-family:"Nunito";font-size:12px;font-weight:800;letter-spacing:.02em;text-shadow:none;color:#d6eadd;margin-top:4px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+nav a{font-family:"Bebas Neue",system-ui,sans-serif;font-size:19px;letter-spacing:.06em;color:var(--ink);text-decoration:none;background:var(--card);border:2px solid var(--ink);border-radius:8px;padding:6px 12px 4px;box-shadow:3px 3px 0 var(--ink)}
+nav a.on{background:var(--yellow)}
+main{max-width:860px;margin:0 auto;padding:28px 20px 60px}
+h1,h2,.btn{font-family:"Bebas Neue",system-ui,sans-serif;font-weight:400;letter-spacing:.04em}
+h1{font-size:clamp(48px,11vw,88px);line-height:.92;margin:0}
+h1.small{font-size:clamp(38px,8vw,60px)}
+h2{font-size:30px;margin:34px 0 10px;line-height:1}
+p{margin:0 0 12px}
+a{color:var(--red);font-weight:800}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin:6px 0 24px}
+.hero img{width:min(260px,40vw);height:auto;justify-self:end}
+.hero .tag{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:6px;padding:4px 10px;font-family:"Courier New",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 14px}
+.hero p.lead{font-size:20px;font-weight:800;color:#3b3b3b}
+@media(max-width:560px){.hero{grid-template-columns:1fr}.hero img{justify-self:center}}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:18px 20px;box-shadow:4px 4px 0 var(--ink);margin:16px 0}
+.card ul{margin:0;padding-left:20px}
+.card li{margin:5px 0}
+.card p:last-child{margin:0}
+.board{background:var(--board);color:#fff;border:2px solid var(--ink);border-radius:12px;padding:18px 20px;box-shadow:4px 4px 0 var(--ink);margin:16px 0}
+.board h2{color:var(--digit);margin:0 0 8px}
+.board p{color:#e8e8e8}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;border:2px solid var(--ink);border-radius:10px;padding:12px 22px 9px;box-shadow:4px 4px 0 var(--ink);font-size:26px}
+.soon{display:inline-block;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:8px 16px 6px;font-family:"Bebas Neue",system-ui;font-size:20px;letter-spacing:.06em;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:6px 4px 14px}
+.shots img{height:460px;border:2px solid var(--ink);border-radius:22px;box-shadow:4px 4px 0 var(--ink)}
+.muted{color:var(--muted)}
+.ticket{background:#fffdf5;border:2px solid var(--ink);border-radius:4px;padding:14px 16px;font-family:"Courier New",monospace;font-size:14px;letter-spacing:.04em;box-shadow:4px 4px 0 var(--ink);margin:16px 0}
+.ticket b{display:block;font-family:"Bebas Neue",system-ui;font-size:22px;letter-spacing:.08em;border-bottom:1px dashed var(--ink);padding-bottom:6px;margin-bottom:8px}
+footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:2px dashed var(--muted);padding-top:14px}
+</style>
+</head>
+<body>
+<header class="top"><div class="in"><a class="brand" href="index.html">Chope<small>Paris · Courses · Bières</small></a><nav><a href="index.html">Chope</a><a href="assistance.html" class="on">Assistance</a><a href="confidentialite.html">Confidentialité</a></nav></div></header>
+<main>
+
+<h1 class="small">Assistance</h1>
+<p>Une question, un bug, une idée de capsule ? Écrivez à <a href="mailto:hello@amui.fr">hello@amui.fr</a>. Réponse sous quelques jours.</p>
+<h2>Questions fréquentes</h2>
+<div class="card"><p><strong>Comment mes potes rejoignent-ils mon groupe ?</strong></p><p>Dans Moi, touchez « Inviter » : le lien et le code à six lettres se partagent par message. Ils entrent le code dans « J'ai un code » et choisissent un pseudo.</p></div>
+<div class="card"><p><strong>Je me suis trompé, comment annuler une bière ?</strong></p><p>Juste après le +1, le message en bas de l'écran propose « Annuler ». Plus tard, ouvrez Moi › Mes bières : chacune se modifie ou se supprime.</p></div>
+<div class="card"><p><strong>Quand la soirée se termine-t-elle ?</strong></p><p>Toute seule, à 11 h du matin le lendemain du départ. Il n'y a rien à lancer ni à arrêter : la première bière ouvre la soirée.</p></div>
+<div class="card"><p><strong>Qui peut changer les réglages du groupe ?</strong></p><p>L'admin, c'est-à-dire la personne qui a créé le groupe : preuve photo, dose, objectif, nom du groupe, reports de départ, exclusion d'un membre.</p></div>
+<div class="card"><p><strong>Les paris, c'est de l'argent ?</strong></p><p>Non. Les gains sont des points, calculés à partir d'une cote. L'enjeu écrit sur un pari (« le perdant paie une tournée ») n'engage que vous entre amis.</p></div>
+<div class="card"><p><strong>Comment effacer mes données ?</strong></p><p>Sur l'écran d'accueil, « Effacer mes données » supprime tout immédiatement : vos bières, vos photos, vos paris et votre place dans chaque groupe. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p></div>
+<div class="card"><p><strong>Une photo ou un membre pose problème.</strong></p><p>L'admin du groupe peut retirer une photo, annuler un pari ou exclure un membre depuis Moi. Pour un signalement plus grave, écrivez-nous.</p></div>
+<div class="card"><p><strong>Faut-il une connexion internet ?</strong></p><p>Oui, pour partager le classement avec le groupe en direct. L'app s'ouvre sans réseau mais les bières ne partent qu'une fois connecté.</p></div>
+
+<footer>© 2026 SAS NOMAD · Chope · Conçu et développé par Noa Madar · <a href="mailto:hello@amui.fr">hello@amui.fr</a><br>Chope est réservée aux adultes. À consommer avec modération.</footer>
+</main>
+</body>
+</html>
